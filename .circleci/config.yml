@@ -62,10 +62,10 @@ workflows:
   build:
     jobs:
       - build
-       - deploy:
-           requires:
-             - build
-           filters:
-             branches:
-               only:
-                 - development
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - development
