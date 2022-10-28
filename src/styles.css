@@ -1,0 +1,297 @@
+/* Usado para importar regras de estilo de outras folhas de
+
+estilo. */
+
+@import "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400&display=swap";
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+* {
+  /* Este seletor escolhe todos os elementos do documento e
+
+redefine todas as configurações do navegador. */
+  margin: 0;
+  padding: 0px;
+  padding-top: 0px;
+  border: 0;
+  font-size: 100%;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+  vertical-align: baseline;
+  text-decoration: none;
+  list-style: none;
+  background-color: #000000;
+}
+
+.linha {
+  display: flex;
+  flex-direction: row;
+}
+
+.collection.with-header .collection-header {
+  background-color: #000000 !important;
+}
+
+.collection .collection-item {
+  background-color: #000000 !important;
+  color: yellow !important;
+}
+
+.input-field .prefix {
+  color: #2bfd3c;
+}
+
+.input-field.col .prefix ~ label,
+.input-field.col .prefix ~ .validate ~ label {
+  color: #2bfd3c;
+}
+
+.input-field .prefix ~ input {
+  color: #2bfd3c;
+}
+
+.hidden {
+  color: red;
+  display: none;
+  font-size: small;
+  margin-left: 10px;
+}
+
+select {
+  background-color: #000000;
+  color: #2bfd3c;
+  border: solid 1px #2bfd3c;
+  padding: 5px;
+}
+
+.btn {
+  background-color: yellow;
+  color: #000000;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+nav {
+  background-color: #000000 !important;
+  padding-top: 5px;
+}
+
+header nav ul li {
+  display: inline-block;
+}
+
+header nav ul li a {
+  margin: 0px 15px;
+  font-size: 17px;
+  font-weight: 900;
+  color: yellow;
+}
+.botao {
+  padding: 5px 30px;
+  border-radius: 10px;
+}
+
+.botao.botao-destaque {
+  background: #2bfd3c;
+  color: black;
+  font-weight: bold;
+}
+
+.sobre {
+  /* justify-content: space-between;
+  align-items: center; */
+}
+
+.sobre article {
+  width: 60%;
+}
+
+.sobre article h1 {
+  font-size: 70px;
+  /* line-height: 90%; */
+  font-weight: 400;
+  color: #2bfd3c;
+}
+
+.sobre article h2,
+.sobre article p {
+  color: #39c;
+}
+
+.sobre article h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 200%;
+}
+
+.sobre article p {
+  margin: 10px 0 40px;
+}
+
+.links > ul {
+  background-color: yellow !important;
+}
+
+footer {
+  background-color: yellow !important;
+}
+
+footer div {
+  background-color: yellow !important;
+}
+
+footer ul li a {
+  text-decoration: yellow;
+  background-color: yellow;
+}
+
+footer ul li {
+  background-color: yellow;
+  margin: 0 10px 5px 5px;
+}
+
+footer ul li a img {
+  background-color: yellow;
+  width: 30px;
+}
+
+/* Define o tamanho dos elementos em telas de 1150px. */
+
+@media (max-width: 1150px) {
+  .conteudo {
+    width: 950px;
+  }
+}
+
+/* Define o tamanho dos elementos em telas de 1024px. */
+
+@media (max-width: 1024px) {
+  .conteudo {
+    width: 850px;
+  }
+
+  .sobre figcaption img {
+    width: 600px;
+  }
+}
+
+/* Define o tamanho dos elementos em telas de 915px. */
+
+@media (max-width: 915px) {
+  .conteudo {
+    width: 600px;
+  }
+
+  .linha {
+    flex-direction: column;
+  }
+
+  header nav {
+    margin: 30px 0;
+  }
+
+  .sobre article {
+    width: 100%;
+  }
+
+  .sobre figcaption img {
+    width: 100%;
+    margin: 30px 0 0 0;
+  }
+
+  footer .linha {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* Define o tamanho dos elementos em telas de 665px. */
+
+@media (max-width: 665px) {
+  .conteudo {
+    width: 400px;
+  }
+}
+
+/* Define o tamanho dos elementos em telas de 450px. */
+
+@media (max-width: 450px) {
+  .conteudo {
+    width: 290px;
+  }
+
+  header nav {
+    width: 100%;
+    padding: 10px 0 20px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Itens do formulário */
+
+fieldset {
+  width: 60%;
+  padding: 10px 0 20px;
+  margin-left: 10px;
+  border: 2px solid lightblue;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.agrupamento {
+  display: flex;
+  flex-direction: column;
+}
+
+.agrupamento-botao {
+  padding-top: 10px;
+}
+
+.entrada {
+  font-family: inherit;
+  line-height: 1.15;
+  border: 2px solid lightblue;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+}
+
+.entrada:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgb(173, 216, 230, 0.5);
+}
+
+.entrada.mensagem {
+  resize: none;
+}
+
+.rotulo {
+  padding-bottom: 2.5px;
+  padding-top: 20px;
+  font-weight: 600;
+}

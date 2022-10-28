@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FMT-Trilha</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://floripamaistec.pmf.sc.gov.br/wp-content/themes/floripamaistec/img/icones/favicon.ico"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <img src="./assets/img/fmt-logo.svg" width="150px" class="brand-logo" />
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="active"><a href="index.html">Calculadora</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Fim do header -->
+    <div class="container smart-container">
+      <!-- Início do main -->
+      <main>
+        <!-- Inìcio da section do conteúdo do site -->
+        <section class="sobre">
+          <!-- Conteúdo de texto sobre o site -->
+          <article>
+            <h1>Calculadora</h1>
+            <p>
+              O projeto pretende criar uma calculadora com operações matemáticas
+              básicas utilizando a linguagem de programação JavaScript.
+            </p>
+            <ul class="collection with-header black">
+              <li class="collection-header"><h2>Instruções de Uso</h2></li>
+              <li class="collection-item">
+                1. Insira o primeiro valor no campo de texto chamado Valor#1.
+              </li>
+              <li class="collection-item">
+                2. Insira o segundo valor no campo de texto chamado Valor#2.
+              </li>
+              <li class="collection-item">
+                3. Selecione a operação matemática que deseja que a calculadora
+                execute.
+              </li>
+              <li class="collection-item">
+                4. Pressione o botão calcular e o resultado é exibido no campo
+                de texto chamado resultado.
+              </li>
+            </ul>
+            <ul class="collection with-header black">
+              <li class="collection-header">
+                <h2>Calculadora ECMAScript v1.0</h2>
+              </li>
+              <div class="row">
+                <form class="col s12">
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <i class="material-icons prefix">keyboard</i>
+                      <input
+                        id="value1"
+                        type="number"
+                        class="validate"
+                        required
+                      />
+                      <label for="value1">Valor#1*</label>
+                      <span id="vali1" class="hidden">Valor obrigatório</span>
+                    </div>
+                    <div class="input-field col s6">
+                      <i class="material-icons prefix">keyboard</i>
+                      <input
+                        id="value2"
+                        type="number"
+                        class="validate"
+                        required
+                      />
+                      <label for="value2">Valor#2*</label>
+                      <span id="vali2" class="hidden">Valor obrigatório</span>
+                    </div>
+
+                    <div class="input-field col s12">
+                      <select id="ope" class="browser-default">
+                        <option value="" disabled selected>
+                          Selecione uma operação*
+                        </option>
+                        <option value="soma">Soma</option>
+                        <option value="subtraçao">Subtração</option>
+                        <option value="multiplicaçao">Multiplicação</option>
+                        <option value="divisao">Divisão</option>
+                      </select>
+                      <span id="vali3" class="hidden">Valor obrigatório</span>
+                    </div>
+                    <div class="col s12">
+                      <button
+                        class="btn waves-effect waves-light"
+                        type="button"
+                        id="calcular"
+                      >
+                        Calcular
+                      </button>
+                    </div>
+                    <div id="divResultado" class="input-field col s12">
+                      <i class="material-icons prefix">drag_handle</i>
+                      <label for="resultado">Resultado</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </ul>
+          </article>
+        </section>
+      </main>
+      <!-- Fim do main -->
+    </div>
+
+    <!-- Inicio do footer -->
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <img
+              style="
+                width: 8rem !important;
+                margin-right: 5rem;
+                background-color: yellow !important;
+              "
+              src="./assets/img/fmt-logo.svg"
+              alt="logo da empresa"
+              width="200px"
+            />
+          </div>
+          <div class="col l4 offset-l2 s12 links">
+            <ul class="linha">
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/arielduarte"
+                  target="_blank"
+                >
+                  <img src="./assets/img/icons8-linkedin.svg" alt="linkedin" />
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/reyduar" target="_blank">
+                  <img src="./assets/img/icons8-github.svg" alt="github" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/user/ArielSorgens/videos"
+                  target="_blank"
+                >
+                  <img src="./assets/img/icons8-youtube.svg" alt="yt" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./assets/img/icons8-twitter.svg" alt="twitter" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          <span style="background-color: yellow !important; color: black"
+            >© 2022 Copyright Ariel Duarte</span
+          >
+        </div>
+      </div>
+    </footer>
+    <!-- Fim do footer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>
