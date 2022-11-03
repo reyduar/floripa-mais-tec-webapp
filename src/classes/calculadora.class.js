@@ -37,7 +37,10 @@ export class Calculadora {
 
   imprimir(resultado) {
     console.log("====================================");
-    console.log(`O resultado da operação é: ${resultado}`);
+    console.log(
+      `O resultado da operação é: %c${resultado}`,
+      "font-weight:bold"
+    );
     console.log("====================================");
   }
 }

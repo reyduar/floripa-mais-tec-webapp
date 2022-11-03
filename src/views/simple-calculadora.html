@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculadora</title>
+  </head>
+  <body>
+    <div>
+      <label for="numero1">Número 1:</label>
+      <input
+        placeholder="Insira numero 1"
+        id="num1"
+        type="number"
+        class="validate"
+        required
+      />
+      <div>
+        <label for="numero1">Número 1:</label>
+        <input
+          placeholder="Insira numero 2"
+          id="num2"
+          type="number"
+          class="validate"
+          required
+        />
+      </div>
+      <div>
+        <label for="numero1">Operação:</label>
+        <select id="ope" required>
+          <option value="" disabled selected>Selecione uma operação*</option>
+          <option value="soma">Soma</option>
+          <option value="subtraçao">Subtração</option>
+          <option value="multiplicaçao">Multiplicação</option>
+          <option value="divisao">Divisão</option>
+        </select>
+      </div>
+      <div>
+        <button onclick="calcular()" type="button" id="calcular">
+          Calcular
+        </button>
+      </div>
+      <div>
+        <label for="resultado">Resultado é:</label>
+        <input placeholder="0" readonly id="resultado" type="text" required />
+      </div>
+    </div>
+    <script>
+      /**
+       * Calcular função para o evento onclick do botão calcular
+       * */
+      function calcular() {
+        let resultado = 0;
+        // Obter valores de elementos html
+        const num1 = document.querySelector("#num1").value;
+        const num2 = document.querySelector("#num2").value;
+        const ope = document.querySelector("#ope").value;
+        // Validamos que os valores não estão vazios
+        if (num1 && num2 && ope) {
+          // Converta para numerar os valores que estão como string
+          const valor1 = Number(num1);
+          const valor2 = Number(num2);
+          // Realizamos as operações com base na opção selecionada
+          switch (ope) {
+            case "soma":
+              resultado = valor1 + valor2;
+              break;
+            case "subtraçao":
+              resultado = valor1 - valor2;
+              break;
+            case "multiplicaçao":
+              resultado = valor1 * valor2;
+              break;
+            case "divisao":
+              resultado = valor1 / valor2;
+              break;
+          }
+          // imprima o resultado no campo de resultado
+          document.getElementById("resultado").value = resultado;
+        } else {
+          alert("Insira os valores necessários para realizar o cálculo.");
+        }
+      }
+    </script>
+  </body>
+</html>
