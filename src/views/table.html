@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Table</title>
+    <style>
+      table tr td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Aqui inserimos uma tabela com dados -->
+    <div id="app"></div>
+    <script>
+      /*
+       * Esta lista é obtida com busca de uma API, isso é chamado de solicitações http ou AJAX
+       * Usamos fetch para obtener los datos de la aplicación https://randomuser.me/api
+       */
+      const obterListaDePessoas = (cantidad) => {
+        const url = `https://randomuser.me/api/?results=${cantidad}&nat=us`;
+        return fetch(url).then((response) => response.json());
+      };
+
+      /*
+       * Nosso array se chama pessoas e vem como parâmetro da função obterListaDePessoas
+       */
+      const imprimirHTML = (pessoas) => {
+        let tableBodyHtml = "";
+        // console.log('=========Array de pessoas===========');
+        // console.log(pessoas);
+        // console.log('====================================');
+        pessoas.forEach((pessoa) => {
+          tableBodyHtml += `
+          <tbody>
+            <td><img src="${pessoa.picture.thumbnail}"></img></td>
+            <td>${pessoa.name.first}</td>
+            <td>${pessoa.name.last}</td>
+          </tbody>
+    `;
+        });
+        html = `
+          <h1>Lista de pessoas</h1>
+          <table>
+            <thead>
+              <th>Foto</th>
+              <th>Nome</th>
+              <th>Sobrenome</th>
+            </thead>
+            <tbody>
+              ${tableBodyHtml}
+            </tbody>
+          </table>
+     `;
+
+        /*
+         * Aqui injetamos a tabela no div com o aplicativo id
+         */
+        const contenerApp = document.querySelector("#app");
+        contenerApp.innerHTML = html;
+      };
+
+      /*
+       * Essa função é conhecida como promessa, um conceito que conheço quando fazemos requisições http
+       */
+      let cantidad = 10;
+      obterListaDePessoas(cantidad).then(
+        ({ results }) => imprimirHTML(results),
+        (error) => console.error(new Error("Error" + error))
+      );
+    </script>
+  </body>
+</html>

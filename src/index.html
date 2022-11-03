@@ -24,103 +24,12 @@
         <img src="./assets/img/fmt-logo.svg" width="150px" class="brand-logo" />
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li class="active"><a href="index.html">Calculadora</a></li>
+          <li><a href="calculadora.html">Ejemplo</a></li>
         </ul>
       </div>
     </nav>
     <!-- Fim do header -->
-    <div class="container smart-container">
-      <!-- Início do main -->
-      <main>
-        <!-- Inìcio da section do conteúdo do site -->
-        <section class="sobre">
-          <!-- Conteúdo de texto sobre o site -->
-          <article>
-            <h1>Calculadora</h1>
-            <p>
-              O projeto pretende criar uma calculadora com operações matemáticas
-              básicas utilizando a linguagem de programação JavaScript.
-            </p>
-            <ul class="collection with-header black">
-              <li class="collection-header"><h2>Instruções de Uso</h2></li>
-              <li class="collection-item">
-                1. Insira o primeiro valor no campo de texto chamado Valor#1.
-              </li>
-              <li class="collection-item">
-                2. Insira o segundo valor no campo de texto chamado Valor#2.
-              </li>
-              <li class="collection-item">
-                3. Selecione a operação matemática que deseja que a calculadora
-                execute.
-              </li>
-              <li class="collection-item">
-                4. Pressione o botão calcular e o resultado é exibido no campo
-                de texto chamado resultado.
-              </li>
-            </ul>
-            <ul class="collection with-header black">
-              <li class="collection-header">
-                <h2>Calculadora ECMAScript v1.0</h2>
-              </li>
-              <div class="row">
-                <form class="col s12">
-                  <div class="row">
-                    <div class="input-field col s6">
-                      <i class="material-icons prefix">keyboard</i>
-                      <input
-                        id="value1"
-                        type="number"
-                        class="validate"
-                        required
-                      />
-                      <label for="value1">Valor#1*</label>
-                      <span id="vali1" class="hidden">Valor obrigatório</span>
-                    </div>
-                    <div class="input-field col s6">
-                      <i class="material-icons prefix">keyboard</i>
-                      <input
-                        id="value2"
-                        type="number"
-                        class="validate"
-                        required
-                      />
-                      <label for="value2">Valor#2*</label>
-                      <span id="vali2" class="hidden">Valor obrigatório</span>
-                    </div>
-
-                    <div class="input-field col s12">
-                      <select id="ope" class="browser-default">
-                        <option value="" disabled selected>
-                          Selecione uma operação*
-                        </option>
-                        <option value="soma">Soma</option>
-                        <option value="subtraçao">Subtração</option>
-                        <option value="multiplicaçao">Multiplicação</option>
-                        <option value="divisao">Divisão</option>
-                      </select>
-                      <span id="vali3" class="hidden">Valor obrigatório</span>
-                    </div>
-                    <div class="col s12">
-                      <button
-                        class="btn waves-effect waves-light"
-                        type="button"
-                        id="calcular"
-                      >
-                        Calcular
-                      </button>
-                    </div>
-                    <div id="divResultado" class="input-field col s12">
-                      <i class="material-icons prefix">drag_handle</i>
-                      <label for="resultado">Resultado</label>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </ul>
-          </article>
-        </section>
-      </main>
-      <!-- Fim do main -->
-    </div>
+    <calculadora></calculadora>
 
     <!-- Inicio do footer -->
     <footer class="page-footer">
