@@ -22,8 +22,3 @@ export class SetorConvidado {
     return;
   }
 }
-
-// Menores de 14 anos: setor amarelo
-// Maiores de 14 anos e menores de 18 anos: setor azul
-// Maiores de 18 anos e menores de 25 anos: setor branco
-// Maiores de 25 anos: setor verde
