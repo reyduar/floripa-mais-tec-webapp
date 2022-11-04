@@ -1,0 +1,47 @@
+<div class="container smart-container">
+  <!-- Início do main -->
+  <main>
+    <!-- Inìcio da section do conteúdo do site -->
+    <section class="sobre">
+      <!-- Conteúdo de texto sobre o site -->
+      <article>
+        <h1>Distribuição dos convidados em setores</h1>
+        <p>
+          O programa busca o nome do setor para cada grupo de idade, inserindo a
+          idade do convidado, o nome de cada setor é diferenciado por cores.
+        </p>
+        <ul class="collection with-header black">
+          <li class="collection-header">
+            <h2>Buscar Setor por idade do convidado</h2>
+          </li>
+          <div class="row">
+            <form class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">keyboard</i>
+                  <input id="value1" type="number" class="validate" required />
+                  <label for="value1">Idade do convidado*</label>
+                  <span id="vali1" class="hidden">Valor obrigatório</span>
+                </div>
+                <div class="col s12">
+                  <button
+                    class="btn waves-effect waves-light"
+                    type="button"
+                    id="calcular"
+                  >
+                    Buscar Setor
+                  </button>
+                </div>
+                <div id="divResultado" class="input-field col s12">
+                  <i class="material-icons prefix">drag_handle</i>
+                  <label for="resultado">Resultado</label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </ul>
+      </article>
+    </section>
+  </main>
+  <!-- Fim do main -->
+</div>
