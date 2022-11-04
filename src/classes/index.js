@@ -1,2 +1,3 @@
 import { Calculadora } from "./calculadora.class";
-export { Calculadora };
+import { SetorConvidado } from "./setor.class";
+export { Calculadora, SetorConvidado };

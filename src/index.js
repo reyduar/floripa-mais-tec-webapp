@@ -1,4 +1,6 @@
-import { menu } from "./js/navegador.component";
-import { criarInputResultadoHTLM } from "./js/calculadora.component";
 import "./styles.css";
-criarInputResultadoHTLM(0);
+import "./js/navegador.component";
+import { criarInputResultadoHTML } from "./js/calculadora.component";
+import { imprimirResultadoHTML } from "./js/setor.component";
+criarInputResultadoHTML(0);
+// imprimirResultadoHTML("");
