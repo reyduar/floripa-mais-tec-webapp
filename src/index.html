@@ -17,77 +17,6 @@
       rel="shortcut icon"
       href="https://floripamaistec.pmf.sc.gov.br/wp-content/themes/floripamaistec/img/icones/favicon.ico"
     />
-  </head>
-  <body>
-    <nav>
-      <div class="nav-wrapper">
-        <img src="./assets/img/fmt-logo.svg" width="150px" class="brand-logo" />
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li class="active"><a href="index.html">Calculadora</a></li>
-          <li><a href="calculadora.html">Ejemplo</a></li>
-        </ul>
-      </div>
-    </nav>
-    <!-- Fim do header -->
-    <calculadora></calculadora>
-
-    <!-- Inicio do footer -->
-    <footer class="page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <img
-              style="
-                width: 8rem !important;
-                margin-right: 5rem;
-                background-color: yellow !important;
-              "
-              src="./assets/img/fmt-logo.svg"
-              alt="logo da empresa"
-              width="200px"
-            />
-          </div>
-          <div class="col l4 offset-l2 s12 links">
-            <ul class="linha">
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/arielduarte"
-                  target="_blank"
-                >
-                  <img src="./assets/img/icons8-linkedin.svg" alt="linkedin" />
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/reyduar" target="_blank">
-                  <img src="./assets/img/icons8-github.svg" alt="github" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.youtube.com/user/ArielSorgens/videos"
-                  target="_blank"
-                >
-                  <img src="./assets/img/icons8-youtube.svg" alt="yt" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="./assets/img/icons8-twitter.svg" alt="twitter" />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <div class="container">
-          <span style="background-color: yellow !important; color: black"
-            >© 2022 Copyright Ariel Duarte</span
-          >
-        </div>
-      </div>
-    </footer>
-    <!-- Fim do footer -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
@@ -95,5 +24,18 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+  </head>
+  <body>
+    <!-- Partial htmls  -->
+    <navegador></navegador>
+    <!-- Content section  -->
+    <div id="calcContent">
+      <calculadora></calculadora>
+    </div>
+    <div id="setorContent">
+      <setor></setor>
+    </div>
+    <!-- footer -->
+    <ffooter></ffooter>
   </body>
 </html>

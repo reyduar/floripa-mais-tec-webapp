@@ -1,6 +1,6 @@
 const path = require("path");
-const HtmlWebpack = require("html-webpack-plugin");
 const HtmlWebpackPartialsPlugin = require("html-webpack-partials-plugin");
+const HtmlWebpack = require("html-webpack-plugin");
 const MiniCssExtract = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 
@@ -9,6 +9,7 @@ module.exports = {
 
   output: {
     clean: true,
+    filename: "main.[contenthash].js",
   },
 
   module: {
@@ -48,6 +49,24 @@ module.exports = {
     new HtmlWebpackPartialsPlugin({
       path: path.join(__dirname, "./src/views/calculadora.html"),
       location: "calculadora",
+      template_filename: ["index.html"],
+    }),
+
+    new HtmlWebpackPartialsPlugin({
+      path: path.join(__dirname, "./src/views/navegador.html"),
+      location: "navegador",
+      template_filename: ["index.html"],
+    }),
+
+    new HtmlWebpackPartialsPlugin({
+      path: path.join(__dirname, "./src/views/setor.html"),
+      location: "setor",
+      template_filename: ["index.html"],
+    }),
+
+    new HtmlWebpackPartialsPlugin({
+      path: path.join(__dirname, "./src/views/footer.html"),
+      location: "ffooter",
       template_filename: ["index.html"],
     }),
 
