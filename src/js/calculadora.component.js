@@ -5,7 +5,7 @@ import "../css/componentes.css";
 const divResultado = document.querySelector("#divResultado");
 const buttonCalcular = document.querySelector("#calcular");
 
-export const criarInputResultadoHTLM = (resultado) => {
+export const criarInputResultadoHTML = (resultado) => {
   const htmlResultado = `
   <input id="resultado" value=${resultado} type="text" readonly />
   `;
@@ -51,4 +51,4 @@ const onSubmit = () => {
 };
 
 // JS Events
-// buttonCalcular.addEventListener("click", onSubmit);
+buttonCalcular.addEventListener("click", onSubmit);
